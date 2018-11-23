@@ -12,10 +12,12 @@ struct User: Decodable {
     let id: String
     let userName: String
     let online: Bool
+    let perfs: Perfs
     
     private enum CodingKeys: String, CodingKey {
         case id
         case userName = "username"
         case online
+        case perfs
     }
 }

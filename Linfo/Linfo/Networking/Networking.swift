@@ -9,7 +9,8 @@
 import Foundation
 
 struct Networking {
-    public func performNetworkTask<T: Decodable>(endpoint: LichessApi, type: T.Type, completion: ((_ response: T) -> Void)?) {
+    
+    func performNetworkTask<T: Decodable>(endpoint: LichessApi, type: T.Type, completion: ((_ response: T) -> Void)?) {
         
         let url = endpoint.baseURL.appendingPathComponent(endpoint.path)
         let urlRequest = URLRequest(url: url)
