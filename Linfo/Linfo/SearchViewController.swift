@@ -18,6 +18,8 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var textField: UITextField!
     
+    private var user: User?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,4 +37,17 @@ class SearchViewController: UIViewController {
     }
     */
 
+}
+
+extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
+    
 }

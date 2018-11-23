@@ -17,6 +17,8 @@
 		749DBC3221A81A1800290B39 /* EnpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749DBC3121A81A1800290B39 /* EnpointType.swift */; };
 		749DBC3421A81B2F00290B39 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749DBC3321A81B2F00290B39 /* User.swift */; };
 		749DBC3621A81BEF00290B39 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749DBC3521A81BEF00290B39 /* Response.swift */; };
+		749DBC3A21A81D5300290B39 /* Perfs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749DBC3921A81D5300290B39 /* Perfs.swift */; };
+		749DBC3C21A81D7D00290B39 /* GameResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749DBC3B21A81D7D00290B39 /* GameResults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		749DBC3121A81A1800290B39 /* EnpointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnpointType.swift; sourceTree = "<group>"; };
 		749DBC3321A81B2F00290B39 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		749DBC3521A81BEF00290B39 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		749DBC3921A81D5300290B39 /* Perfs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfs.swift; sourceTree = "<group>"; };
+		749DBC3B21A81D7D00290B39 /* GameResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 		749DBC3821A81C7000290B39 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				749DBC3B21A81D7D00290B39 /* GameResults.swift */,
+				749DBC3921A81D5300290B39 /* Perfs.swift */,
 				749DBC3321A81B2F00290B39 /* User.swift */,
 			);
 			path = Model;
@@ -172,6 +178,8 @@
 				749DBC3421A81B2F00290B39 /* User.swift in Sources */,
 				749DBC2E21A818F700290B39 /* Networking.swift in Sources */,
 				749DBC2C21A8188000290B39 /* SearchViewController.swift in Sources */,
+				749DBC3A21A81D5300290B39 /* Perfs.swift in Sources */,
+				749DBC3C21A81D7D00290B39 /* GameResults.swift in Sources */,
 				7447B81521A6DD1B0007E18D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
