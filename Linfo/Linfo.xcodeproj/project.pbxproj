@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		744724AF21A9702F0047E409 /* GameTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744724AE21A9702F0047E409 /* GameTypeTableViewCell.swift */; };
+		744724B121A972440047E409 /* GameTypeViewModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744724B021A972440047E409 /* GameTypeViewModelCell.swift */; };
 		7447B81521A6DD1B0007E18D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7447B81421A6DD1B0007E18D /* AppDelegate.swift */; };
 		7447B81A21A6DD1B0007E18D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7447B81821A6DD1B0007E18D /* Main.storyboard */; };
 		7447B81C21A6DD1C0007E18D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7447B81B21A6DD1C0007E18D /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		744724AE21A9702F0047E409 /* GameTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameTypeTableViewCell.swift; path = Linfo/GameTypeTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		744724B021A972440047E409 /* GameTypeViewModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTypeViewModelCell.swift; sourceTree = "<group>"; };
 		7447B81121A6DD1B0007E18D /* Linfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Linfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7447B81421A6DD1B0007E18D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7447B81921A6DD1B0007E18D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,10 +73,12 @@
 			isa = PBXGroup;
 			children = (
 				749DBC2B21A8188000290B39 /* SearchViewController.swift */,
+				744724AE21A9702F0047E409 /* GameTypeTableViewCell.swift */,
 				749DBC3721A81C6700290B39 /* Networking */,
 				749DBC3821A81C7000290B39 /* Model */,
 				7447B81421A6DD1B0007E18D /* AppDelegate.swift */,
 				7447B81821A6DD1B0007E18D /* Main.storyboard */,
+				744724B021A972440047E409 /* GameTypeViewModelCell.swift */,
 				7447B81B21A6DD1C0007E18D /* Assets.xcassets */,
 				7447B81D21A6DD1C0007E18D /* LaunchScreen.storyboard */,
 				7447B82021A6DD1C0007E18D /* Info.plist */,
@@ -175,6 +181,8 @@
 				749DBC3021A8199600290B39 /* LichessAPI.swift in Sources */,
 				749DBC3221A81A1800290B39 /* EnpointType.swift in Sources */,
 				749DBC3621A81BEF00290B39 /* Response.swift in Sources */,
+				744724AF21A9702F0047E409 /* GameTypeTableViewCell.swift in Sources */,
+				744724B121A972440047E409 /* GameTypeViewModelCell.swift in Sources */,
 				749DBC3421A81B2F00290B39 /* User.swift in Sources */,
 				749DBC2E21A818F700290B39 /* Networking.swift in Sources */,
 				749DBC2C21A8188000290B39 /* SearchViewController.swift in Sources */,

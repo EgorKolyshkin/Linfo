@@ -27,7 +27,6 @@ class SearchViewController: UIViewController {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
-                print(self.user)
             }
         }
     }
@@ -60,8 +59,12 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GameCell", for: indexPath)
-
+        
         if let user = user {
+            switch indexPath.row {
+            case 1:
+                
+            }
             cell.textLabel?.text = String(user.perfs.blitz.rating)
             cell.detailTextLabel?.text = String(user.perfs.blitz.prog)
         }
