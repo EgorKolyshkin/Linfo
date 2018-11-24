@@ -53,20 +53,34 @@ class SearchViewController: UIViewController {
 
 extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 110
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 6
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "GameCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "GameCell", for: indexPath) as? GameTypeTableViewCell else { return UITableViewCell() }
         
         if let user = user {
             switch indexPath.row {
+            case 0:
+                cell.setFields(gameType: "Blitz", gameResults: user.perfs.blitz)
             case 1:
-                
+                cell.setFields(gameType: "Bullet", gameResults: user.perfs.bullet)
+            case 2:
+                cell.setFields(gameType: "Classical", gameResults: user.perfs.classical)
+            case 3:
+                cell.setFields(gameType: "Correspondence", gameResults: user.perfs.correspondence)
+            case 4:
+                cell.setFields(gameType: "Puzzle", gameResults: user.perfs.puzzle)
+            case 5:
+                cell.setFields(gameType: "Rapid", gameResults: user.perfs.rapid)
+            default:
+                break
             }
-            cell.textLabel?.text = String(user.perfs.blitz.rating)
-            cell.detailTextLabel?.text = String(user.perfs.blitz.prog)
         }
         
         return cell

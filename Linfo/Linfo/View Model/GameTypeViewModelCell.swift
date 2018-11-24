@@ -10,7 +10,6 @@ import Foundation
 
 class GameTypeViewModelCell {
     
-    private var user: Perfs?
-    
+    private var perfs: Perfs?
     
 }
