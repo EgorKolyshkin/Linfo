@@ -10,6 +10,25 @@ import Foundation
 
 class GameTypeViewModelCell {
     
-    private var perfs: Perfs?
+    private let gameResults: GameResults
+    private let gameType: String
+    
+    init(gameType: String, gameResults: GameResults) {
+        self.gameResults = gameResults
+        self.gameType = gameType
+    }
+    
+    var type: String {
+        return gameType
+    }
+    
+    var rating: String {
+        return String(gameResults.rating)
+    }
+    
+    var progress: String {
+        return String(gameResults.prog)
+    }
+    
     
 }

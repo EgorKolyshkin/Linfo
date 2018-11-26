@@ -14,10 +14,13 @@ class GameTypeTableViewCell: UITableViewCell {
     @IBOutlet weak var rating: UILabel!
     @IBOutlet weak var progress: UILabel!
         
-    func setFields(gameType: String, gameResults: GameResults) {
-        self.gameType.text = gameType
-        self.rating.text = String(gameResults.rating)
-        self.progress.text = String(gameResults.prog)
+    public var viewModel: GameTypeViewModelCell? {
+        didSet {
+            guard let viewModel = viewModel else { return }
+            self.gameType.text = viewModel.type
+            self.rating.text = viewModel.rating
+            self.progress.text = viewModel.progress
+        }
     }
     
 }

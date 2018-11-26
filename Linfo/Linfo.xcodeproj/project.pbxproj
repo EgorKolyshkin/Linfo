@@ -21,6 +21,7 @@
 		749DBC3621A81BEF00290B39 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749DBC3521A81BEF00290B39 /* Response.swift */; };
 		749DBC3A21A81D5300290B39 /* Perfs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749DBC3921A81D5300290B39 /* Perfs.swift */; };
 		749DBC3C21A81D7D00290B39 /* GameResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749DBC3B21A81D7D00290B39 /* GameResults.swift */; };
+		74B0B98521AACB460064EC94 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B0B98421AACB460064EC94 /* SearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		749DBC3521A81BEF00290B39 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		749DBC3921A81D5300290B39 /* Perfs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfs.swift; sourceTree = "<group>"; };
 		749DBC3B21A81D7D00290B39 /* GameResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResults.swift; sourceTree = "<group>"; };
+		74B0B98421AACB460064EC94 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				744724B021A972440047E409 /* GameTypeViewModelCell.swift */,
+				74B0B98421AACB460064EC94 /* SearchViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				749DBC3621A81BEF00290B39 /* Response.swift in Sources */,
 				744724B121A972440047E409 /* GameTypeViewModelCell.swift in Sources */,
 				749DBC3421A81B2F00290B39 /* User.swift in Sources */,
+				74B0B98521AACB460064EC94 /* SearchViewModel.swift in Sources */,
 				749DBC2E21A818F700290B39 /* Networking.swift in Sources */,
 				749DBC2C21A8188000290B39 /* SearchViewController.swift in Sources */,
 				749DBC3A21A81D5300290B39 /* Perfs.swift in Sources */,

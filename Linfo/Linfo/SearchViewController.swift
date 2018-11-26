@@ -13,23 +13,17 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func serchForUser(_ sender: UIButton) {
-        networking.performNetworkTask(endpoint: LichessApi.user(user: textField.text!), type: User.self) { [weak self] user in
-            self?.user = user
+        viewModel.getUserStatistic(userName: textField.text!) { [weak self] in
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
         }
         view.endEditing(true)
     }
     
-    private let networking = Networking()
-    
     @IBOutlet weak var textField: UITextField!
     
-    private var user: User? {
-        didSet {
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }
-    }
+    private var viewModel = SearchViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,17 +61,17 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
         if let user = user {
             switch indexPath.row {
             case 0:
-                cell.setFields(gameType: "Blitz", gameResults: user.perfs.blitz)
+                cell.viewModel = GameTypeViewModelCell(gameType: "Blitz", gameResults: user.perfs.blitz)
             case 1:
-                cell.setFields(gameType: "Bullet", gameResults: user.perfs.bullet)
+                cell.viewModel = GameTypeViewModelCell(gameType: "Bullet", gameResults: user.perfs.bullet)
             case 2:
-                cell.setFields(gameType: "Classical", gameResults: user.perfs.classical)
+                cell.viewModel = GameTypeViewModelCell(gameType: "Classical", gameResults: user.perfs.classical)
             case 3:
-                cell.setFields(gameType: "Correspondence", gameResults: user.perfs.correspondence)
+                cell.viewModel = GameTypeViewModelCell(gameType: "Correspondence", gameResults: user.perfs.correspondence)
             case 4:
-                cell.setFields(gameType: "Puzzle", gameResults: user.perfs.puzzle)
+                cell.viewModel = GameTypeViewModelCell(gameType: "Puzzle", gameResults: user.perfs.puzzle)
             case 5:
-                cell.setFields(gameType: "Rapid", gameResults: user.perfs.rapid)
+                cell.viewModel = GameTypeViewModelCell(gameType: "Rapid", gameResults: user.perfs.rapid)
             default:
                 break
             }
