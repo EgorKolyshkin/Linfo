@@ -58,24 +58,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "GameCell", for: indexPath) as? GameTypeTableViewCell else { return UITableViewCell() }
         
-        if let user = user {
-            switch indexPath.row {
-            case 0:
-                cell.viewModel = GameTypeViewModelCell(gameType: "Blitz", gameResults: user.perfs.blitz)
-            case 1:
-                cell.viewModel = GameTypeViewModelCell(gameType: "Bullet", gameResults: user.perfs.bullet)
-            case 2:
-                cell.viewModel = GameTypeViewModelCell(gameType: "Classical", gameResults: user.perfs.classical)
-            case 3:
-                cell.viewModel = GameTypeViewModelCell(gameType: "Correspondence", gameResults: user.perfs.correspondence)
-            case 4:
-                cell.viewModel = GameTypeViewModelCell(gameType: "Puzzle", gameResults: user.perfs.puzzle)
-            case 5:
-                cell.viewModel = GameTypeViewModelCell(gameType: "Rapid", gameResults: user.perfs.rapid)
-            default:
-                break
-            }
-        }
+        cell.viewModel = viewModel.cellViewModel(for: indexPath.row)
         
         return cell
     }
