@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xih-Fs-XSv">
-                                <rect key="frame" x="0.0" y="128" width="375" height="539"/>
+                                <rect key="frame" x="0.0" y="130" width="375" height="537"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GameCell" rowHeight="70" id="dyE-fu-ezc" customClass="GameTypeTableViewCell" customModule="Linfo" customModuleProvider="target">
@@ -46,7 +46,7 @@
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prog" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vk3-EJ-pAX">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prog" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vk3-EJ-pAX">
                                                                     <rect key="frame" x="299" y="0.0" width="36" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
@@ -72,17 +72,17 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ygN-ud-NiW">
-                                <rect key="frame" x="0.0" y="64" width="375" height="64"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ygN-ud-NiW">
+                                <rect key="frame" x="0.0" y="64" width="375" height="66"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cCh-qg-YaY">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cCh-qg-YaY">
+                                        <rect key="frame" x="0.0" y="0.0" width="323" height="66"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsU-Uf-HMr">
-                                        <rect key="frame" x="0.0" y="34" width="375" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsU-Uf-HMr">
+                                        <rect key="frame" x="327" y="0.0" width="48" height="66"/>
                                         <state key="normal" title="Search"/>
                                         <connections>
                                             <action selector="serchForUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wuX-x1-7jN"/>
@@ -90,21 +90,43 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mv0-XP-22B">
+                                <rect key="frame" x="0.0" y="130" width="375" height="537"/>
+                                <subviews>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="TyH-XY-a4x">
+                                        <rect key="frame" x="169" y="270" width="37" height="37"/>
+                                        <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="TyH-XY-a4x" firstAttribute="top" secondItem="mv0-XP-22B" secondAttribute="top" constant="270" id="9Mm-Dr-MsF"/>
+                                    <constraint firstAttribute="trailing" secondItem="TyH-XY-a4x" secondAttribute="trailing" constant="169" id="PYO-6J-Z0G"/>
+                                    <constraint firstAttribute="bottom" secondItem="TyH-XY-a4x" secondAttribute="bottom" constant="230" id="qxX-xv-OgK"/>
+                                    <constraint firstItem="TyH-XY-a4x" firstAttribute="leading" secondItem="mv0-XP-22B" secondAttribute="leading" constant="169" id="w9N-yg-MMV"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xih-Fs-XSv" secondAttribute="bottom" id="9QZ-5h-QPz"/>
+                            <constraint firstItem="mv0-XP-22B" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="B4b-H8-QQR"/>
+                            <constraint firstItem="mv0-XP-22B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IKi-Iq-FVE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xih-Fs-XSv" secondAttribute="trailing" id="JJT-UN-FWz"/>
                             <constraint firstItem="xih-Fs-XSv" firstAttribute="top" secondItem="ygN-ud-NiW" secondAttribute="bottom" id="RUo-tx-1tg"/>
                             <constraint firstItem="ygN-ud-NiW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Sg5-w3-6p8"/>
+                            <constraint firstItem="mv0-XP-22B" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cd0-CK-4I4"/>
+                            <constraint firstItem="mv0-XP-22B" firstAttribute="top" secondItem="ygN-ud-NiW" secondAttribute="bottom" id="gUa-GS-P7g"/>
                             <constraint firstItem="ygN-ud-NiW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jUz-Cu-HWV"/>
                             <constraint firstItem="xih-Fs-XSv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oGR-8t-YfQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ygN-ud-NiW" secondAttribute="trailing" id="qqp-IT-ExJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="bjq-0c-rBN"/>
+                    <navigationItem key="navigationItem" title="Search View Controller" id="bjq-0c-rBN"/>
                     <connections>
+                        <outlet property="activiryIndicator" destination="TyH-XY-a4x" id="9xj-gH-o7e"/>
+                        <outlet property="activityIndicatorView" destination="mv0-XP-22B" id="Wg0-Wf-bnF"/>
                         <outlet property="tableView" destination="xih-Fs-XSv" id="hHE-gp-9nE"/>
                         <outlet property="textField" destination="cCh-qg-YaY" id="o6p-G2-NM7"/>
                     </connections>

@@ -12,10 +12,16 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var activiryIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var activityIndicatorView: UIView!
+    
     @IBAction func serchForUser(_ sender: UIButton) {
+        self.activiryIndicator.startAnimating()
         viewModel.getUserStatistic(userName: textField.text!) { [weak self] in
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
+                self?.activiryIndicator.stopAnimating()
+                self?.activityIndicatorView.isHidden = true
             }
         }
         view.endEditing(true)
@@ -29,7 +35,6 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        // Do any additional setup after loading the view.
     }
     
 
