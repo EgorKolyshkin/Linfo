@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7425F9E421B98A9100A730AD /* SearchStreamersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7425F9E321B98A9100A730AD /* SearchStreamersViewController.swift */; };
+		7425F9E621B98CBD00A730AD /* LiveStreamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7425F9E521B98CBD00A730AD /* LiveStreamer.swift */; };
 		744724B121A972440047E409 /* GameTypeViewModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744724B021A972440047E409 /* GameTypeViewModelCell.swift */; };
 		744724B621A979410047E409 /* GameTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744724B521A979410047E409 /* GameTypeTableViewCell.swift */; };
 		7447B81521A6DD1B0007E18D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7447B81421A6DD1B0007E18D /* AppDelegate.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7425F9E321B98A9100A730AD /* SearchStreamersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStreamersViewController.swift; sourceTree = "<group>"; };
+		7425F9E521B98CBD00A730AD /* LiveStreamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStreamer.swift; sourceTree = "<group>"; };
 		744724B021A972440047E409 /* GameTypeViewModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTypeViewModelCell.swift; sourceTree = "<group>"; };
 		744724B521A979410047E409 /* GameTypeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTypeTableViewCell.swift; sourceTree = "<group>"; };
 		7447B81121A6DD1B0007E18D /* Linfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Linfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				749DBC2B21A8188000290B39 /* SearchViewController.swift */,
+				7425F9E321B98A9100A730AD /* SearchStreamersViewController.swift */,
 				744724B421A978F90047E409 /* View */,
 				749DBC3721A81C6700290B39 /* Networking */,
 				749DBC3821A81C7000290B39 /* Model */,
@@ -119,6 +124,7 @@
 		749DBC3821A81C7000290B39 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7425F9E521B98CBD00A730AD /* LiveStreamer.swift */,
 				749DBC3B21A81D7D00290B39 /* GameResults.swift */,
 				749DBC3921A81D5300290B39 /* Perfs.swift */,
 				749DBC3321A81B2F00290B39 /* User.swift */,
@@ -199,11 +205,13 @@
 			files = (
 				749DBC3021A8199600290B39 /* LichessAPI.swift in Sources */,
 				744724B621A979410047E409 /* GameTypeTableViewCell.swift in Sources */,
+				7425F9E621B98CBD00A730AD /* LiveStreamer.swift in Sources */,
 				749DBC3221A81A1800290B39 /* EnpointType.swift in Sources */,
 				749DBC3621A81BEF00290B39 /* Response.swift in Sources */,
 				744724B121A972440047E409 /* GameTypeViewModelCell.swift in Sources */,
 				749DBC3421A81B2F00290B39 /* User.swift in Sources */,
 				74B0B98521AACB460064EC94 /* SearchViewModel.swift in Sources */,
+				7425F9E421B98A9100A730AD /* SearchStreamersViewController.swift in Sources */,
 				749DBC2E21A818F700290B39 /* Networking.swift in Sources */,
 				749DBC2C21A8188000290B39 /* SearchViewController.swift in Sources */,
 				749DBC3A21A81D5300290B39 /* Perfs.swift in Sources */,
