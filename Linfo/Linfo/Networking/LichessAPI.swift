@@ -10,18 +10,21 @@ import Foundation
 
 enum LichessApi {
     case user(user: String)
+    case streamers()
 }
 
 
 extension LichessApi: EndpointType {
     var baseURL: URL {
-        return URL(string: "https://lichess.org/api/")!
+        return URL(string: "https://lichess.org/")!
     }
     
     var path: String {
         switch self {
         case .user(let userName):
-            return "user/\(userName)"
+            return "api/user/\(userName)"
+        case .streamers():
+            return "streamer/live"
         }
     }
 }
